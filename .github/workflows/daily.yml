@@ -30,8 +30,9 @@ jobs:
           subject: "Daily GitHub Action Report - 9:15 AM EST"
           to: "muralich466@gmail.com"
           from: "GitHub Actions <muralich466@gmail.com>"
-          body: |
-            Hello Murali,
-            Your daily GitHub Action ran successfully at 9:15 AM EST.
-            Please find the output attached.
-          attachments: output.txt
+                    
+          body: file://stock_report.txt
+                Hello Murali
+                  Your daily GitHub Action ran successfully at 9:15 AM EST.
+                  Please find the output attached.
+          attachments: stock_report.txt
