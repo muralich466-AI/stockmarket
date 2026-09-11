@@ -9,15 +9,21 @@ jobs:
   daily-task:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
+   -steps:
+      - name: Checkout repository code
         uses: actions/checkout@v4
-
-      - name: Run daily script
-        id: runscript
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
         run: |
-          echo "Daily workflow executed at 9:15 AM EST" > output.txt
-          echo "Some more logs..." >> output.txt
+          python -m pip install --upgrade pip
+          pip install yfinance pandas
+      - name: Run stock analysis script
+        run: |
+          # Runs the script, prints to GitHub console, AND saves to stock_report.txt
+          python dailycheckCalloption.py 2>&1 | tee stock_report.txt
 
       - name: Send email with output
         uses: dawidd6/action-send-mail@v4
