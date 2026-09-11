@@ -2,7 +2,7 @@ name: Daily 9:15 AM EST Job with Email
 
 on:
   schedule:
-    - cron: "*/5 * * * *"   # 9:15 AM EST (14:15 UTC)
+    - cron: "15 14 * * *"   # 9:15 AM EST (14:15 UTC)
   workflow_dispatch:
 
 jobs:
