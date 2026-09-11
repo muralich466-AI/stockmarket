@@ -37,7 +37,7 @@ jobs:
           to: "muralich466@gmail.com"
           from: "GitHub Actions <muralich466@gmail.com>"
                     
-          body: file://stock_report.txt
+          body: 
                 Hello Murali
                   Your daily GitHub Action ran successfully at 9:15 AM EST.
                   Please find the output attached.
