@@ -66,6 +66,6 @@ def find_optimal_call_option(stock: yf.Ticker, current_price: float):
         print(f"Bid: ${best_call['bid']} | Ask: ${best_call['ask']} | OI: {best_call['openInterest']}")
 
 if __name__ == "__main__":
-    watchlist = ["AAPL", "MSFT", "SPY"]
+    watchlist =  ["AAPL", "MSFT", "SPY", "GOOGL", "AMZN", "NVDA", "META", "TSLA", "QQQ", "AMD"]
     for sym in watchlist:
         analyze_stock(sym)
